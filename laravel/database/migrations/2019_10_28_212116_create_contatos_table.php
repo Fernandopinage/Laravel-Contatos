@@ -23,7 +23,6 @@ class CreateContatosTable extends Migration
             $table->string('cidade');
             $table->string('estado');
             $table->string('cep');
-            
             $table->timestamps();
         });
     }
