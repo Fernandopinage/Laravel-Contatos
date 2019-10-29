@@ -15,15 +15,15 @@
 
         <!-- menu  -->
 
-        <div class="container">
+        <div class="">
 
-            @yield('navi')
+            @include('layout.navi')
     
         </div>
 
         <!-- conteudo  -->
 
-        <div class="container">
+        <div class="container" >
 
             @yield('conteudo')
 

@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 
 
+route::get('/', 'contatoController@login');
