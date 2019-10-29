@@ -1,5 +1,5 @@
-<div class="row" style="margin:20px;padding:20px; background-color:#F0FFFF; color:white;">
+<div class="row" style="margin:20px;padding:20px; background-color:#708090; color:white;">
 
-    <a href="#" class="btn btn-outline-dark">Cadastra</a>
+    <a href="cadastroUsuario" class="btn btn-dark">Cadastra</a>
 
 </div>
