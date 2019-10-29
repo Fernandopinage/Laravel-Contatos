@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\contato;
 use App\usuario;
-use App\Auth;
+use Illuminate\Support\Facades\Auth;
 
 class contatoController extends Controller
 {
@@ -25,7 +25,13 @@ class contatoController extends Controller
 
     public function validandoLogin (Request $request){
 
+            $dados = ['email'=>$request->email,'senha'=>$request->senha];
 
+        if (Auth::attempt($dados)) {
+            
+            //return redirect()->intended('home');
+            return $dados;
+        }
 
     }
 
@@ -42,8 +48,17 @@ class contatoController extends Controller
     // função para validar cadastro -----
     public function validarCadastro( Request $request){
 
-        return "cadastrado";
-       // return view('cadastro');
+        //criando o relacionamento com a tabela USuario        
+        $usuario = new usuario;
+
+        $usuario->nome = $request->nome;
+        $usuario->email = $request->email;
+        $usuario->senha = $request->senha;
+
+        $usuario->save();
+
+        //return dd($usuario);
+       return redirect('/');
     }
     //---------------------------------------
 

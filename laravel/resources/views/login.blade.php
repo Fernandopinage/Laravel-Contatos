@@ -11,18 +11,18 @@
         
               <div class="form-group row">
 
-                    <label for="text" class="col-sm-4">Email:</label>
+                    <label for="email" class="col-sm-4">Email:</label>
                 <div class="col-sm-12">
-                    <input type="text" class="form-control" name="email" id="text" placeholder="Email">
+                    <input type="text" class="form-control" name="email" id="email" placeholder="Email">
                 </div>
 
               </div>
 
 
               <div class="form-group row">
-                <label for="password" class="col-sm-4">Password:</label>
+                <label for="senha" class="col-sm-4">Password:</label>
                 <div class="col-sm-12">
-                  <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+                  <input type="password" class="form-control" name="senha" id="senha" placeholder="Password">
                 </div>
               </div>
               
