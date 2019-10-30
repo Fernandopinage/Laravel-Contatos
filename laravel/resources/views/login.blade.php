@@ -5,13 +5,22 @@
 
 <div class="row"  style="margin:220px 400px;">
 
-    <form method="" action="">
+    <form method="POST" action="validandoLogin">
 
         {{ csrf_field() }}
         
+
               <div class="form-group row">
 
-                    <label for="email" class="col-sm-4">Email:</label>
+              <label for="nome" class="col-sm-4">Nome:</label>
+              <div class="col-sm-12">
+              <input type="text" class="form-control" name="nome" id="nome" placeholder="Nome">
+              </div>
+
+              </div>
+              <div class="form-group row">
+
+                 <label for="email" class="col-sm-4">Email:</label>
                 <div class="col-sm-12">
                     <input type="text" class="form-control" name="email" id="email" placeholder="Email">
                 </div>

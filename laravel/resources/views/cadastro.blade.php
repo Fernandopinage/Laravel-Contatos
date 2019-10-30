@@ -6,7 +6,7 @@
    <div class="row" style="margin:150px 400px;">
 
     
-        <form action="validando" method="POST">
+        <form action="cadastroUsuario" method="POST">
 
                 {{ csrf_field() }}
 

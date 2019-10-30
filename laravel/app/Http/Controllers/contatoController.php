@@ -25,12 +25,11 @@ class contatoController extends Controller
 
     public function validandoLogin (Request $request){
 
-            $dados = ['email'=>$request->email,'senha'=>$request->senha];
+        $dados = $request->only('nome','email', 'senha');
 
         if (Auth::attempt($dados)) {
-            
-            //return redirect()->intended('home');
-            return $dados;
+            // Authentication passed...
+            return redirect()->intended('home');
         }
 
     }
