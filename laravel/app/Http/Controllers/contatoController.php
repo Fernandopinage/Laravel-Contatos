@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\contato;
-use App\User;
 use App\usuario;
 use Illuminate\Support\Facades\Auth;
 
@@ -55,10 +54,12 @@ class contatoController extends Controller
         $usuario->email = $request->email;
         $usuario->senha = $request->senha;
 
+        //dd($usuario);
+
         $usuario->save();
 
-        //return dd($usuario);
-       return redirect('/');
+        
+        return redirect('/');
     }
     //---------------------------------------
 
