@@ -14,7 +14,7 @@
 
                         <label for="nome" class="col-sm-4">Nome:</label>
                         <div class="col-sm-12">
-                            <input type="text" class="form-control" name="name" id="nome" placeholder="Nome">
+                            <input type="text" class="form-control" name="nome" id="nome" placeholder="Nome">
                         </div>
         
                 </div>
@@ -32,7 +32,7 @@
                 <div class="form-group row">
                     <label for="password" class="col-sm-4">Password:</label>
                     <div class="col-sm-12">
-                      <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+                      <input type="password" class="form-control" name="senha" id="password" placeholder="Password">
                     </div>
                 </div>
                 
