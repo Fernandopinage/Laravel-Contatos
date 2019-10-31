@@ -5,6 +5,18 @@
 
 <div class="row"  style="margin:220px 400px;">
 
+
+  @if($errors->any())
+  @foreach($errors->all() as $error)    
+  <div class="alert alert-danger">
+    {{ $error }}
+  </div>
+   
+  @endforeach 
+
+  @endif
+    
+
     <form method="POST" action="validandoLogin">
 
         {{ csrf_field() }}

@@ -25,19 +25,28 @@ class contatoController extends Controller
 
     public function validandoLogin (Request $request){
 
+        // criando regra de validação 
+
+        $this->validate($request,[
+
+            'email'=>'required',
+            'senha'=>'required'
+
+        ]);
+
+
+
+        // funçao para pesquiser no banco se tem algum dado 
         $usuario = usuario::where('email',$request->email)->first();
-        
-
         if($usuario){
-
-            if($usuario){
-
-                return $usuario;
-
+        // caso se tiver o login vai pesquisar a senha no banco    
+            if($usuario = usuario::where('senha',$request->senha)->first()){
+                return redirect('home');
+            }else{
+                return redirect('/');
             }
-           
         }
-            return "nao cadastrado";
+        return redirect('/');
 
     }
 

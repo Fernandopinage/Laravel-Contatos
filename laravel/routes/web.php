@@ -24,3 +24,7 @@ route::get('/', 'contatoController@login');
 route::get('cadastroUsuario','contatoController@cadastroUsuario');
 // validando o cadastro 
 route::POST('validandoLogin','contatoController@validandoLogin');
+
+/////////////////////////////////////////////////////////////////////////////
+//rota home
+route::get('home','homeController@home');
