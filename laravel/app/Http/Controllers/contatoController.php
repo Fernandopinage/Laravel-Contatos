@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\contato;
 use App\usuario;
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class contatoController extends Controller
 {
@@ -25,12 +25,19 @@ class contatoController extends Controller
 
     public function validandoLogin (Request $request){
 
-        $dados = $request->only('nome','email', 'senha');
+        $usuario = usuario::where('email',$request->email)->first();
+        
 
-        if (Auth::attempt($dados)) {
-            // Authentication passed...
-            return redirect()->intended('home');
+        if($usuario){
+
+            if($usuario){
+
+                return $usuario;
+
+            }
+           
         }
+            return "nao cadastrado";
 
     }
 

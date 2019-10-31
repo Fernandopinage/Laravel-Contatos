@@ -23,4 +23,4 @@ route::get('/', 'contatoController@login');
 // tela cadastro usuario
 route::get('cadastroUsuario','contatoController@cadastroUsuario');
 // validando o cadastro 
-route::POST('validarCadastro','contatoController@validarCadastro');
+route::POST('validandoLogin','contatoController@validandoLogin');

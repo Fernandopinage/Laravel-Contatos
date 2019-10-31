@@ -9,15 +9,6 @@
 
         {{ csrf_field() }}
         
-
-              <div class="form-group row">
-
-              <label for="nome" class="col-sm-4">Nome:</label>
-              <div class="col-sm-12">
-              <input type="text" class="form-control" name="nome" id="nome" placeholder="Nome">
-              </div>
-
-              </div>
               <div class="form-group row">
 
                  <label for="email" class="col-sm-4">Email:</label>
