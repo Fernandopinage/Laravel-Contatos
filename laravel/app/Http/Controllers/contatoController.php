@@ -63,6 +63,18 @@ class contatoController extends Controller
     // função para validar cadastro -----
     public function validarCadastro( Request $request){
 
+
+        // criando validação do formulario de cadastro 
+
+        $this->validate($request,[
+
+            'nome'=>'required',
+            'email'=>'required',
+            'senha'=>'required'
+
+        ]);
+
+
         //criando o relacionamento com a tabela USuario        
         $usuario = new usuario;
 

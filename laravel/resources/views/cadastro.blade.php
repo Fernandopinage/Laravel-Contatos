@@ -5,6 +5,17 @@
     
    <div class="row" style="margin:150px 400px;">
 
+    <!--  funçao para validar -->
+        @if($errors->any())
+            @foreach($errors->all() as $error)    
+                <div class="alert alert-danger">
+                    {{ $error }}
+                </div>
+   
+            @endforeach 
+
+        @endif
+    <!--                fim                      -->    
     
         <form action="validarCadastro" method="POST">
 

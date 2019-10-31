@@ -10,20 +10,20 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/*
 Route::get('/', function () {
     return view('welcome');
 });
-
+*/
+/////////////////////////////////////////////////////////////////////////////
 // rota de acesso login 
 route::get('/', 'contatoController@login');
-
-//rota de add novo usuario do sistema
-
+// validar login
+route::POST('validandoLogin','contatoController@validandoLogin');
 // tela cadastro usuario
 route::get('cadastroUsuario','contatoController@cadastroUsuario');
-// validando o cadastro 
-route::POST('validandoLogin','contatoController@validandoLogin');
+// validando o cadastro
+route::post('validarCadastro', 'contatoController@validarCadastro');
 
 /////////////////////////////////////////////////////////////////////////////
 //rota home
