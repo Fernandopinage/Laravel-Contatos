@@ -2,10 +2,12 @@
 
 <!-- criando o form de cadastro de novo Usuario -->
 @section('conteudo')
-    
-   <div class="row" style="margin:150px 400px;">
 
-    <!--  funçao para validar -->
+<h1 class="text text-center">New Usuario </h1>
+<hr style="color:teal">
+   <div class="row" style="margin:150px 400px;">
+    
+        <!--  funçao para validar -->
         @if($errors->any())
             @foreach($errors->all() as $error)    
                 <div class="alert alert-danger">
