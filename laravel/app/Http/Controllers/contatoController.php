@@ -91,5 +91,19 @@ class contatoController extends Controller
     }
     //---------------------------------------
 
+    // função tela de contato ---------------
+    public function contato(){
+
+        
+        return view('contato');
+    }
+    //---------------------------------------
+    // função criando novo contato ----------
+    public function criandoContato(Request $request){
+
+        $contato = new contato;
+        $contato->save();
+        return "ok";
+    }
 
 }
