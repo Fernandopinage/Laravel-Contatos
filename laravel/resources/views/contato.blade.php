@@ -5,6 +5,19 @@
 <h1 class="text text-center">New Contatos</h1>
 <hr>
 <br><br>
+
+        <!--  funçao para validar -->
+        @if($errors->any())
+            @foreach($errors->all() as $error)    
+                <div class="alert alert-danger">
+                    {{ $error }}
+                </div>
+   
+            @endforeach 
+
+        @endif
+    <!--                fim                      -->   
+
         <form action="criandoContato" method="POST">
 
             {{ csrf_field() }}
