@@ -8,5 +8,5 @@ class usuario extends Model
 {
     //
 
-    protected  $PrimaryKey = "id_usuario";
+    //protected  $PrimaryKey = "id_usuario";
 }

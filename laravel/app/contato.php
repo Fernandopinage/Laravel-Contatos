@@ -8,5 +8,5 @@ class contato extends Model
 {
     //
 
-    protected  $PrimaryKey = "id_contato";
+    //protected $PrimaryKey ='id_contato';
 }

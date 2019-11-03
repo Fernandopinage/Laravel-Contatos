@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\contato;
 use App\usuario;
-use Illuminate\Support\Facades\DB;
+
 
 class contatoController extends Controller
 {
@@ -126,5 +126,56 @@ class contatoController extends Controller
         $contato->save();
         return view('contato');
     }
+    //---------------------------------------
+
+    //----- Metodo para editar --------------
+
+    public function editarContado($id){
+
+        $contato = contato::find($id);
+
+        return view('editarContato',compact('contato'));
+
+    }
+
+    //---------------------------------------
+
+    //- Metodo depois de editado salva update
+
+    public function updateContato(Request $request , $id){
+
+        $contato = contato::find($id); //primiero procura o id do contato
+
+        $contato->nome = $request->nome;
+        $contato->email = $request->email;
+        $contato->telefone = $request->telefone;
+        $contato->celular = $request->celular;
+        $contato->cep = $request->cep;
+        $contato->rua = $request->rua;
+        $contato->cidade = $request->cidade;
+        $contato->estado = $request->estado;
+        $contato->save();              // segundo pega os dados do forme e salva no banco 
+
+        // lembrando que quando for mostra o camnho no form tem que acrecentar 
+        // o id mais um a / antes para nao concatenar exemplo "/update/{{$contato->id}}"
+
+        return redirect('home'); // redirecinando para pagina home
+       
+        
+       //return dd($contato);
+    }
+
+
+    //---------------------------------------
+    
+    //---- metodo para excluir registro -----
+    public function excluirContato($id){
+
+         
+           contato::destroy($id);
+           return redirect('home'); //redirecinando para pagina home
+    }
+
+    //---------------------------------------
 
 }

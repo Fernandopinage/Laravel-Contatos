@@ -36,3 +36,9 @@ route::get('home','homeController@home');
 route::get('contato','contatoController@contato');
 // salvando contato no banco
 route::post('criandoContato','contatoController@criandoContato');
+//editar contato 
+route::get('editar/{id}','contatoController@editarContado');
+//update do contato 
+route::POST('update/{id}','contatoController@updateContato');
+// excluir contato
+route::get('excluir/{id}','contatoController@excluirContato');
