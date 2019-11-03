@@ -65,7 +65,6 @@ class contatoController extends Controller
 
 
         // criando validação do formulario de cadastro 
-
         $this->validate($request,[
 
             'nome'=>'required',
@@ -101,9 +100,31 @@ class contatoController extends Controller
     // função criando novo contato ----------
     public function criandoContato(Request $request){
 
+        //criando a validação dos campos 
+        $this->validate($request,[
+            'nome'=>'required',
+            'email'=>'required',
+            'telefone'=>'required',
+            'celular'=>'required',
+            'cep'=>'required',
+            'rua'=>'required',
+            'cidade'=>'required',
+            'estado'=>'required'
+
+        ]);
+
+        // pegando os dados do formulario e salvando no banco    
         $contato = new contato;
+        $contato->nome = $request->nome;
+        $contato->email = $request->email;
+        $contato->telefone = $request->telefone;
+        $contato->celular = $request->celular;
+        $contato->cep = $request->cep;
+        $contato->rua = $request->rua;
+        $contato->cidade = $request->cidade;
+        $contato->estado = $request->estado;
         $contato->save();
-        return "ok";
+        return view('contato');
     }
 
 }

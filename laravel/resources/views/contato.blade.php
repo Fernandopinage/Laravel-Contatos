@@ -6,6 +6,8 @@
 <hr>
 <br><br>
         <form action="criandoContato" method="POST">
+
+            {{ csrf_field() }}
             <div class="row">
 
                 <div class="col">

@@ -35,7 +35,4 @@ route::get('home','homeController@home');
 //routa cadastra contato
 route::get('contato','contatoController@contato');
 // salvando contato no banco
-route::POST('criandoContato',function(){
-
-    return "aqui";
-});
+route::post('criandoContato','contatoController@criandoContato');
