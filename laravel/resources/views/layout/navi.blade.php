@@ -11,7 +11,7 @@
         </a>
     
         <a href="contato" class="btn btn-dark">
-         New Contatos 
+         Add Contatos 
         </a>
     </div>
 </div>

@@ -4,7 +4,7 @@
     <!-- -------------------- -->
 @section('conteudo')
     
-<h1 class="text text-center">New Contatos</h1>
+<h1 class="text text-center">Add Contatos</h1>
 <hr>
 <br><br>
 

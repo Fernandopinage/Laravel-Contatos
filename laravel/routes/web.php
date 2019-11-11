@@ -43,3 +43,4 @@ route::POST('update/{id}','contatoController@updateContato');
 // excluir contato
 route::get('excluir/{id}','contatoController@excluirContato');
 /////////////////////////////////////////////////////////////////////////////
+route::get('mostraUsuario','contatoController@mostraUsuario');

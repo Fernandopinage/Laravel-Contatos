@@ -177,5 +177,21 @@ class contatoController extends Controller
     }
 
     //---------------------------------------
+    
 
+    //---- metodo para mostra usuario -------
+
+    public function mostraUsuario(){
+
+     $usuario = usuario::find(1);
+     $contato = $usuario->contato;
+    
+ 
+
+     return $usuario.'<br>'. $contato;
+    //dd($usuario , $contato);
+
+    }
+
+    //---------------------------------------
 }
