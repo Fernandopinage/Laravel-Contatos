@@ -9,4 +9,8 @@ class contato extends Model
     //
 
     //protected $PrimaryKey ='id_contato';
+
+    public function usuario(){
+        return $this->hasMany('App\contato');
+    }
 }
