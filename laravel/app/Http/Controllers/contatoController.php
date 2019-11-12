@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\contato;
 use App\usuario;
-
+use App\usuario_contato;
 
 class contatoController extends Controller
 {
@@ -183,14 +183,14 @@ class contatoController extends Controller
 
     public function mostraUsuario(){
 
-     $usuario = usuario::find(1);
-     $contato = $usuario->contato;
+    $usuario = usuario::find(1);
     
- 
-
-     return $usuario.'<br>'. $contato;
-    //dd($usuario , $contato);
-
+    echo $contato = $usuario->nome.'<br>';
+    echo $contato = $usuario->email.'<br>';
+    echo $contato = $usuario->senha.'<br>';
+    
+    
+    
     }
 
     //---------------------------------------
