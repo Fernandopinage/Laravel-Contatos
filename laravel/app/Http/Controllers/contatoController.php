@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\contato;
 use App\usuario;
 use App\usuario_contato;
+use Session;
 
 class contatoController extends Controller
 {
@@ -41,7 +42,10 @@ class contatoController extends Controller
         if($usuario){
         // caso se tiver o login vai pesquisar a senha no banco    
             if($usuario = usuario::where('senha',$request->senha)->first()){
-                return redirect('home');
+
+                //criando uma sessao lembrando que tem que importa session use App\Session;
+              Session::put('email', $usuario->email);
+               return redirect('home');
             }else{
                 return redirect('/');
             }

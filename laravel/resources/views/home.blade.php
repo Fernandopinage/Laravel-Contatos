@@ -2,8 +2,10 @@
 
 @section('conteudo')
 
+
 <h1 class="text text-center">Lista de Contatos</h1>
 <hr>
+
 
 <table class="table">
         <thead class="thead-dark">

@@ -13,5 +13,14 @@
         <a href="contato" class="btn btn-dark">
          Add Contatos 
         </a>
+
+        
+    </div>
+    <div style="position: absolute; top: 40px; right: 30px;; background-color:#708090; color:white;">
+        {{session('email')}}
+        
+        <a href="" class="btn btn-dark">
+            logaut 
+        </a>
     </div>
 </div>
