@@ -7,6 +7,7 @@ use App\contato;
 use App\usuario;
 use App\usuario_contato;
 use Session;
+use Symfony\Component\Mime\Email;
 
 class contatoController extends Controller
 {
@@ -195,6 +196,19 @@ class contatoController extends Controller
     
     
     
+    }
+
+    //---------------------------------------
+
+
+    //------------função logaut--------------
+
+    public function logaut(){
+
+        //função logaut 
+        session('email');
+        session()->pull('email');
+        return redirect('/');
     }
 
     //---------------------------------------
