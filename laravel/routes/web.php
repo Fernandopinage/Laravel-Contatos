@@ -48,4 +48,4 @@ route::get('mostraUsuario','contatoController@mostraUsuario');
 
 /////////////////////////////////////////////////////////////////////////////
 //routa de logaut
-route::get('logaut','contatoController@logaut');
+route::get('logaut/{id}','contatoController@logaut');

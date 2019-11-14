@@ -203,11 +203,12 @@ class contatoController extends Controller
 
     //------------função logaut--------------
 
-    public function logaut(){
+    public function logaut($id){
 
         //função logaut 
-        session('email');
-        session()->pull('email');
+        
+        $id = session::forget('email');
+        
         return redirect('/');
     }
 
