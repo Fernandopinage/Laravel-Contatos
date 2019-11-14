@@ -23,6 +23,8 @@
         @endif
         
     </div>
+
+    @if (session('email')==!0)
     <div style="position: absolute; top: 40px; right: 30px;; background-color:#708090; color:white;">
         {{session('email')}}
         
@@ -30,4 +32,5 @@
             logaut 
         </a>
     </div>
+    @endif
 </div>
