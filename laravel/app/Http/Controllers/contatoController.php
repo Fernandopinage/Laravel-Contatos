@@ -135,6 +135,7 @@ class contatoController extends Controller
         $contato->estado = $request->estado;
         $contato->save();
 
+        // salvando os dados da relação
         $usuario_contato = new usuario_contato;
         $usuario_contato->usuario_id = $usuario;
         $usuario_contato->contato_id = $contato->id;
@@ -196,21 +197,6 @@ class contatoController extends Controller
     //---------------------------------------
     
 
-    //---- metodo para mostra usuario -------
-
-    public function mostraUsuario(){
-
-    $usuario = usuario::find(1);
-    
-    echo $contato = $usuario->nome.'<br>';
-    echo $contato = $usuario->email.'<br>';
-    echo $contato = $usuario->senha.'<br>';
-    
-    
-    
-    }
-
-    //---------------------------------------
 
 
     //------------função logaut--------------
