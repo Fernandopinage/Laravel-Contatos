@@ -206,7 +206,7 @@ class contatoController extends Controller
     public function logaut($id){
 
         //função logaut 
-        
+        $id = session::flash('email');
         $id = session::forget('email');
         
         return redirect('/');
