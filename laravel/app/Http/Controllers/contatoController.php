@@ -105,6 +105,8 @@ class contatoController extends Controller
     // função criando novo contato ----------
     public function criandoContato(Request $request){
 
+
+        
         //criando a validação dos campos 
         $this->validate($request,[
             'nome'=>'required',
@@ -118,6 +120,9 @@ class contatoController extends Controller
 
         ]);
 
+        //pegando o ID do usuario 
+        $usuario = usuario::where('email',session('email'))->value('id');
+
         // pegando os dados do formulario e salvando no banco    
         $contato = new contato;
         $contato->nome = $request->nome;
@@ -129,7 +134,14 @@ class contatoController extends Controller
         $contato->cidade = $request->cidade;
         $contato->estado = $request->estado;
         $contato->save();
+
+        $usuario_contato = new usuario_contato;
+        $usuario_contato->usuario_id = $usuario;
+        $usuario_contato->contato_id = $contato->id;
+        $usuario_contato->save();
+
         return view('contato');
+        
     }
     //---------------------------------------
 
