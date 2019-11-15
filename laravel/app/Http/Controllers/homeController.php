@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\usuario;
 use App\contato;
 use App\usuario_contato;
+use Illuminate\Support\Facades\DB;
 
 class homeController extends Controller
 {
@@ -21,16 +22,31 @@ class homeController extends Controller
         
         if($usuario == $usuario_contato){
             
-
+            if($usuario_contato){
+                
+            }
 
         }
+            $dados =DB::table('usuario_contatos')
+                        ->join('usuarios','id', '=' ,'usuarios.id')
+                        ->join('contatos','contato_id', '=' ,'contatos.id')
+                        ->whereColumn('usuarios.id','usuario_contatos.usuario_id')
+                        ->get();
+                        
+           
+                        
 
+            echo $dados;
+            return view('home',compact('dados'));
+
+            /*
+            $contato = new contato;
+
+            $dados =  $contato->all();
+
+            return view('home',compact('dados'));
         
-        $contato = new contato;
-
-        $dados =  $contato->all();
-
-        return view('home',compact('dados'));
-        
+        echo $usuario."<br>".$usuario_contato;
+            */
     } 
 }
