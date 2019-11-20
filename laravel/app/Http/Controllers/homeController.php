@@ -14,13 +14,12 @@ class homeController extends Controller
 
     public function home(){
 
-        
-            $contato = new contato;
 
-            $dados =  $contato->all();
-
-            return view('home',compact('dados'));
+    $usuario = usuario::find(2);
+    $contato = $usuario->contato;
+    $dados = $contato;
         
+            return view('home',compact('dados'));     
        
     } 
 }
