@@ -14,12 +14,15 @@ class homeController extends Controller
 
     public function home(){
 
+    $pessoa = usuario::where('email',session('email'))->value('id');    
 
-    $usuario = usuario::find(2);
+        
+    
+    $usuario = usuario::find($pessoa);
     $contato = $usuario->contato;
     $dados = $contato;
         
             return view('home',compact('dados'));     
-       
+      
     } 
 }
