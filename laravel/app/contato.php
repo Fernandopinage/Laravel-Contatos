@@ -11,6 +11,6 @@ class contato extends Model
     //protected $PrimaryKey ='id_contato';
 
     public function usuarios(){
-        return $this->belongsToMany('App\contato','usuario_contatos','contato_id','usuario_id');
+        return $this->belongsToMany('App\usuario','usuario_contatos','contato_id','usuario_id');
     }
 }
