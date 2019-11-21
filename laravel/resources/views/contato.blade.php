@@ -4,8 +4,12 @@
     <!-- -------------------- -->
 @section('conteudo')
     
-<h1 class="text text-center">Add Contatos</h1>
-<hr>
+<div class="card">
+    <div class="card-body text-center">
+      <h1>Add Contatos</h1>
+    </div>
+  </div>
+  <hr>
 <br><br>
 
         <!--  funçao para validar -->

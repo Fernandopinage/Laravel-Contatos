@@ -4,7 +4,11 @@
 <!-- -------------------- -->
 @section('conteudo')
     
-<h1 class="text text-center">Editar Contatos</h1>
+<div class="card">
+  <div class="card-body text-center">
+    <h1>Editar Contatos</h1>
+  </div>
+</div>
 <hr>
 <br><br>
 

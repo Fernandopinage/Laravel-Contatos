@@ -3,7 +3,11 @@
 @section('conteudo')
 
 
-<h1 class="text text-center">Lista de Contatos</h1>
+<div class="card">
+  <div class="card-body text-center">
+    <h1>Lista de Contatos</h1>
+  </div>
+</div>
 <hr>
 
 

@@ -3,9 +3,14 @@
 <!-- criando o form de cadastro de novo Usuario -->
 @section('conteudo')
 
-<h1 class="text text-center">New Usuario </h1>
+<div class="card">
+    <div class="card-body text-center">
+      <h1>New Contatos</h1>
+    </div>
+  </div>
+
 <hr style="color:teal">
-   <div class="row" style="margin:150px 400px;">
+   <div class="row" style="margin:100px 400px;">
     
         <!--  funçao para validar -->
         @if($errors->any())
