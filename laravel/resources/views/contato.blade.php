@@ -26,7 +26,15 @@
 
         @endif
     <!--                fim                      -->   
+    <!--  funçao de mensagem de cadastro realizado com sucesso  -->
+    @if(session('success'))
 
+    <div class="alert alert-success">
+        {{session('success')}}
+    </div>
+   
+    @endif
+    <!--                fim                      -->
         <form action="criandoContato" method="POST">
 
             {{ csrf_field() }}

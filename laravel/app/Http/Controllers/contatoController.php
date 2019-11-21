@@ -140,9 +140,8 @@ class contatoController extends Controller
         $usuario_contato->usuario_id = $usuario;
         $usuario_contato->contato_id = $contato->id;
         $usuario_contato->save();
-
-        return view('contato');
-        
+        //passando a mensagem de cadastro realizado com sucesso 
+        return redirect('contato')->with('success','cadastro realizado com sucesso');        
     }
     //---------------------------------------
 
