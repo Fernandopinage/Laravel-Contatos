@@ -4,7 +4,7 @@
 
 
 <div class="card">
-  <div class="card-body text-center">
+  <div class="card-heard text-center">
     <h1>Lista de Contatos</h1>
   </div>
 </div>

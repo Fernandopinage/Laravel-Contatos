@@ -4,7 +4,7 @@
 @section('conteudo')
 
 <div class="card">
-    <div class="card-body text-center">
+    <div class="card-heard text-center">
       <h1>New Contatos</h1>
     </div>
   </div>
@@ -22,7 +22,8 @@
             @endforeach 
 
         @endif
-    <!--                fim                      -->    
+    <!--                fim                      -->  
+    
     
         <form action="validarCadastro" method="POST">
 

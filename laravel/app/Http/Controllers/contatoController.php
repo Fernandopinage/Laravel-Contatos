@@ -91,7 +91,7 @@ class contatoController extends Controller
         $usuario->save();
 
         
-        return redirect('/');
+        return redirect('/')->with('success','Usuario Cadastrado com sucesso');
     }
     //---------------------------------------
 
@@ -203,9 +203,9 @@ class contatoController extends Controller
     public function logaut($id){
 
         //função logaut 
-        $id = session::flash('email');
-        $id = session::forget('email');
         
+       // $id = session::flesh('email');
+        $id = session::forget('email');
         return redirect('/');
     }
 

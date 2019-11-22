@@ -15,7 +15,17 @@
   @endforeach 
 
   @endif
+     <!--  funçao para aparece a mensagem de cadastro com sucesso  -->
     
+     @if (session('success'))
+                    
+     <div class="alert alert-success">
+         {{session('success')}}
+     </div>
+    @endif
+
+
+<!--                          fim                              --> 
 
     <form method="POST" action="validandoLogin">
 

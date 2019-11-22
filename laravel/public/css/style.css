@@ -1,0 +1,18 @@
+body{
+    background-color: #ffffff;
+}
+
+.card-heard{
+
+    background-color: #403c3c;
+    color: #ffffff;
+        
+}
+
+label{
+
+    color: #18051a;
+    display: block;
+    font: lighter;
+
+}
