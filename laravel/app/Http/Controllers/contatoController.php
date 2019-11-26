@@ -198,17 +198,29 @@ class contatoController extends Controller
 
 
 
-    //------------função logaut--------------
 
-    public function logaut($id){
 
-        //função logaut 
-        
-       
-        $id = session::flash('email');
-        $id = session::forget('email');
-        return redirect('/');
+     //------------função logaut--------------
+
+     public function vermais($id){
+
+        $dados = contato::find($id);
+
+        return view('verMais',compact('dados'));
     }
 
     //---------------------------------------
+        //------------função logaut--------------
+
+        public function logaut($id){
+
+            //função logaut 
+            
+           
+            $id = session::flash('email');
+            $id = session::forget('email');
+            return redirect('/');
+        }
+    
+        //---------------------------------------
 }
