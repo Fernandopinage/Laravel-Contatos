@@ -35,8 +35,8 @@
         <td>{{$dados->estado}}</td>
         <td>{{$dados->cep}}</td>
         
-        <td><a href="/editar/{{ $dados->id }}" class="btn btn-primary"><img src='{{'icons/baseline_visibility_white_18dp.png'}}'> Editar</a></td>
-        <td><a href="/excluir/{{ $dados->id }}" class="btn btn-danger"><img src='{{'icons/baseline_clear_white_18dp.png'}}'> Excluir</a></td>
+        <td><a href="/editar/{{ $dados->id }}" class="btn btn-primary"><img src='{{'/icons/baseline_create_white_18dp.png'}}'> Editar</a></td>
+        <td><a href="/excluir/{{ $dados->id }}" class="btn btn-danger"><img src='{{'/icons/baseline_clear_white_18dp.png'}}'> Excluir</a></td>
       </tr>
            
     </tbody>
