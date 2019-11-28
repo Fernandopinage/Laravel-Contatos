@@ -29,7 +29,7 @@
             <td>{{$dados->nome}}</td>
             <td>{{$dados->telefone}}</td>
             <td>{{$dados->celular}}</td>
-          <td><a href="vermais/{{ $dados->id }}" class="btn btn-info"><img src='{{'icons/baseline_visibility_white_18dp.png'}}'> ver tudo</a></td>
+          <td><a href="vermais/{{ $dados->id }}" class="btn btn-success"><img src='{{'icons/baseline_visibility_white_18dp.png'}}'> ver tudo</a></td>
           <td><a href="/editar/{{ $dados->id }}" class="btn btn-primary"><img src='{{'icons/baseline_create_white_18dp.png'}}'> Editar</a></td>
           <td><a href="/excluir/{{ $dados->id }}" class="btn btn-danger"><img src='{{'icons/baseline_clear_white_18dp.png'}}'> Excluir</a></td>
           </tr>
